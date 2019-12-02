@@ -13,14 +13,35 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id="login")
+	@FindBy(id="input-username")
 	private WebElement userName; 
 	
-	@FindBy(id="password")
+	@FindBy(id="input-password")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(xpath="//button[@type='submit']")
 	private WebElement loginBtn; 
+	
+	@FindBy(id="input-name")
+	private WebElement cusName;
+	
+	@FindBy(id="input-email")
+	private WebElement emailId;
+	
+	@FindBy(id="button-filter")
+	private WebElement filter;
+	
+	
+	
+	@FindBy(xpath="//input[@value=185]")
+	private WebElement checkbox;
+	
+	@FindBy(xpath="//button[@type='button']//i[@class='fa fa-trash-o']")
+	private WebElement delete;
+	
+	
+	
+	
 	
 	public void sendUserName(String userName) {
 		this.userName.clear();
@@ -34,5 +55,26 @@ public class LoginPOM {
 	
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
+	}
+	
+	public void sendCusName(String cusName) {
+		this.cusName.clear();
+		this.cusName.sendKeys(cusName);
+}
+	public void sendEmailId(String emailId) {
+		this.emailId.clear();
+		this.emailId.sendKeys(emailId);
+}
+	
+	public void clickFilterBtn() {
+		this.filter.click(); 
+	}
+	
+	public void clickCheckboxBtn() {
+		this.checkbox.click(); 
+	}
+	
+	public void clickDeleteBtn() {
+		this.delete.click(); 
 	}
 }
