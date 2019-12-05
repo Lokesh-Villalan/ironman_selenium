@@ -55,7 +55,7 @@ public class LoginXLSTest {
 		loginPOM.sendUserName(userName);
 		loginPOM.sendPassword(password);
 		loginPOM.clickLoginBtn();
-		screenShot.captureScreenShot(userName);
+		//screenShot.captureScreenShot(userName);
 
 	}
 
